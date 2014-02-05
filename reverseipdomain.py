@@ -21,5 +21,5 @@ req=urllib2.Request(getrequrl,None,header)
 response = urllib2.urlopen(req)
 domains =re.findall("((?:[0-9]*[a-z][a-z\\.\\d\\-]+)\\.(?:[0-9]*[a-z][a-z\\-]+))(?![\\w\\.])",response.read())
 for domain in domains:
-  mt.addEntity("maltego.Phrase", domain)
+  mt.addEntity("maltego.Domain", domain)
 mt.returnOutput()
