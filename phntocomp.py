@@ -5,6 +5,7 @@
  
 #This Script will retrieve the Company name from the provided Phone Number
 #It uses the API provided by https://www.opencnam.com
+#For MaltegoTransform library and Installation guidelines go to http://www.paterva.com/web6/documentation/developer-local.php
  
 from MaltegoTransform import *
 import sys
