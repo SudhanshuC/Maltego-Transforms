@@ -16,12 +16,9 @@ url=mt.getValue()
 mt = MaltegoTransform()
 opencnam="http://domains.yougetsignal.com/domains.php?remoteAddress="
 getrequrl=opencnam+url
-print getrequrl
 header={'User-Agent':'Mozilla',}
 req=urllib2.Request(getrequrl,None,header)
 response = urllib2.urlopen(req)
-print response.read()
- 
 domains =re.findall("((?:[0-9]*[a-z][a-z\\.\\d\\-]+)\\.(?:[0-9]*[a-z][a-z\\-]+))(?![\\w\\.])",response.read())
 for domain in domains:
   mt.addEntity("maltego.Phrase", domain)
