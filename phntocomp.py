@@ -3,7 +3,7 @@
 #phntocomp.py
 #Author: Sudhanshu Chauhan - @Sudhanshu_C
  
-#This Script will retrieve the Domain(s) at which the specified account has been compromised
+#This Script will retrieve the Company name from the provided Phone Number
 #It uses the API provided by https://www.opencnam.com
  
 from MaltegoTransform import *
