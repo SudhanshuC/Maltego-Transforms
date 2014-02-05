@@ -11,9 +11,9 @@
 from MaltegoTransform import *
 import sys
 import urllib2
-mt = MaltegoTransform();
-mt.parseArguments(sys.argv);
-email=mt.getValue();
+mt = MaltegoTransform()
+mt.parseArguments(sys.argv)
+email=mt.getValue()
 mt = MaltegoTransform()
 hibp="https://haveibeenpwned.com/api/breachedaccount/"
 getrequrl=hibp+email
