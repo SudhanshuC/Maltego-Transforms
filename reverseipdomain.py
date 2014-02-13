@@ -3,8 +3,7 @@
 #reverseipdomain.py
 #Author: Sudhanshu Chauhan - @Sudhanshu_C
  
-#This Script will perform a reverse IP domain check
-#http://www.yougetsignal.com
+#This Script will perform a reverse IP domain check using http://www.yougetsignal.com
  
 from MaltegoTransform import *
 import sys
