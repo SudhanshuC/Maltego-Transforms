@@ -1,18 +1,16 @@
 Maltego-Transforms
 ==================
 
-Maltego Transforms
+Some simple Maltego Transforms
 
 
 Prerequisites:
 ==============
 
 1. Python installed in the system.
-2. cURL in the system.
-3. MaltegoTransform library: http://www.paterva.com/web6/documentation/MaltegoTransform-Python.zip
+2. MaltegoTransform library: http://www.paterva.com/web6/documentation/MaltegoTransform-Python.zip
 
    
-
 How to use the script(s):
 ======================
 
