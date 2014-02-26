@@ -7,7 +7,7 @@ Some simple Maltego Transforms
 Prerequisites:
 ==============
 
-1. Python installed in the system.
+1. Python 2.7 installed in the system.
 2. MaltegoTransform library: http://www.paterva.com/web6/documentation/MaltegoTransform-Python.zip
 
    
