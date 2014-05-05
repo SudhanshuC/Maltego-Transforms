@@ -1,7 +1,7 @@
 Maltego-Transforms
 ==================
 
-Some simple Maltego Transforms
+Some simple Maltego Transforms and Machines
 
 
 Prerequisites:
