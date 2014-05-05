@@ -1,0 +1,19 @@
+//A Maltego Machine which extracts files from a DOmain and further extracts metadata from them. This metadat is used to extract related email IDs for the entities Person.
+
+machine("sudhanshuchauhan.DomaintoMetatoPersontoEmail", 
+        displayName:"DomaintoMetatoPersontoEmail", 
+        author:"Sudhanshu Chauhan",
+        description: "DomaintoMetatoPersontoEmail") {
+
+    start {
+paths{
+run("paterva.v2.DomainToDocumentOther_SE")
+run("paterva.v2.DomainToDocument_SE")
+}
+run("paterva.v2.DocumentToPersonEmail_Meta")
+type("maltego.Person")
+run("paterva.v2.PersonToEmailAddress_SamePGP")
+run("paterva.v2.PersonToEmailAddress_Common")
+run("paterva.v2.PersonToEmailAddress_SE")
+    }
+}
