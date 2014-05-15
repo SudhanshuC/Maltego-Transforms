@@ -1,8 +1,6 @@
 #! /usr/bin/python
 # This script can be used to generate a CSV file from the mtgx file. A mtgx file is a file created by saving the Maltego graph.
 # It extracts the entities, their type and entity parent(s).
-#! /usr/bin/python
-#! /usr/bin/python
 from BeautifulSoup import BeautifulSoup
 import csv
 import zipfile
