@@ -15,7 +15,6 @@ entity=[]
 entvalue=[]
 outcsv=open('maltegoop.csv', 'wb')
 csvwriter = csv.writer(outcsv)
-print ""
 for node in psxml:
   ent=node.findAll("mtg:maltegoentity")[0]["type"]
   entity.append(ent)
