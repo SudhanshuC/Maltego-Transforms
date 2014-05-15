@@ -1,4 +1,4 @@
-// A Maltego Machine which extracts emails for a domain and checks if any account related to that has been pwned (using HaveIBeenPwned).
+// A Maltego Machine which extracts emails for a domain and checks if any account related to that has been pwned (using HaveIBeenPwned: HIBP).
 // Special thanks to Troy Hunt for https://haveibeenpwned.com/
 // It requires the local transform emailtoHIBP: https://github.com/SudhanshuC/Maltego-Transforms/blob/master/emailtoHIBP.py
 
