@@ -2,6 +2,7 @@
 # This script can be used to generate a CSV file from the mtgx file. A mtgx file is a file created by saving the Maltego graph.
 # It extracts the entities, their type and entity parent(s).
 #! /usr/bin/python
+#! /usr/bin/python
 from BeautifulSoup import BeautifulSoup
 import csv
 import zipfile
@@ -21,7 +22,9 @@ entity=["Entity Type"]
 entvalue=["Entity Value"]
 link=["Entity ID"]
 lnk=""
-outcsv=open('maltegoop.csv', 'wb')
+file=file.split('.')
+opfilename=file[0]+".csv"
+outcsv=open(opfilename, 'wb')
 csvwriter = csv.writer(outcsv)
 print ""
 
