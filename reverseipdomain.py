@@ -4,6 +4,7 @@
 #Author: Sudhanshu Chauhan - @Sudhanshu_C
  
 #This Script will perform a reverse IP domain check using http://www.yougetsignal.com
+#In case yougetsignal is down due to overload, we can also use: http://www.my-ip-neighbors.com/?domain=. Simply change the value of the parameter 'opencnam'.
  
 from MaltegoTransform import *
 import sys
