@@ -17,8 +17,11 @@ email=mt.getValue()
 mt = MaltegoTransform()
 hibp="https://haveibeenpwned.com/api/breachedaccount/"
 getrequrl=hibp+email
+try:
 response = urllib2.urlopen(getrequrl)
 for rep in response:
-  mt.addEntity("maltego.Phrase","Pwned at " + rep)
+mt.addEntity("maltego.Phrase","Pwned at " + rep)
+except:
+print ""
 mt.returnOutput()
 
