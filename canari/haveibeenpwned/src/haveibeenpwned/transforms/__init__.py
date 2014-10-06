@@ -12,5 +12,5 @@ __status__ = 'Development'
 
 __all__ = [
     'common',
-    'helloworld'
+    'emailtoHIBP'
 ]
