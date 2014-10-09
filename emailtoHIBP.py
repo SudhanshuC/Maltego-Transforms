@@ -10,10 +10,11 @@
 
 import sys  # PEP 8 http://legacy.python.org/dev/peps/pep-0008/#imports
 import urllib2
+import json
 
 from MaltegoTransform import *
 
-HIBP = "https://haveibeenpwned.com/api/breachedaccount/" # PEP 8 http://legacy.python.org/dev/peps/pep-0008/#constants
+HIBP = "https://haveibeenpwned.com/api/breachedaccount/"  # PEP 8 http://legacy.python.org/dev/peps/pep-0008/#constants
 
 mt = MaltegoTransform()
 mt.parseArguments(sys.argv)
@@ -23,6 +24,8 @@ getrequrl = HIBP + email
 
 try:
     response = urllib2.urlopen(getrequrl)
+    data = json.load(response)
+    response = data
     for rep in response:
         mt.addEntity("maltego.Phrase","Pwned at " + rep)
 
