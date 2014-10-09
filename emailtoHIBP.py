@@ -8,17 +8,17 @@
 #Special Thanks to Troy Hunt - http://www.troyhunt.com/
 #For MaltegoTransform library and Installation guidelines go to http://www.paterva.com/web6/documentation/developer-local.php
 
-import sys  # PEP 8 http://legacy.python.org/dev/peps/pep-0008/#imports
+import sys
 import urllib2
 import json
 
 from MaltegoTransform import *
 
-HIBP = "https://haveibeenpwned.com/api/breachedaccount/"  # PEP 8 http://legacy.python.org/dev/peps/pep-0008/#constants
+HIBP = "https://haveibeenpwned.com/api/breachedaccount/"
 
 mt = MaltegoTransform()
 mt.parseArguments(sys.argv)
-email = mt.getValue()  # PEP 8 http://legacy.python.org/dev/peps/pep-0008/#other-recommendations
+email = mt.getValue()
 mt = MaltegoTransform()
 getrequrl = HIBP + email
 
@@ -29,7 +29,13 @@ try:
     for rep in response:
         mt.addEntity("maltego.Phrase","Pwned at " + rep)
 
-except:
-        print ""
+except urllib2.URLError, e:  # "Response Codes" within https://haveibeenpwned.com/API/v1
+    
+    if e.code == 400:
+        mt.addUIMessage("The e-mail account does not comply with an acceptable format",messageType="PartialError")
+    
+    if e.code == 404:
+        UIMessage = email + " could not be found and has therefore not been pwned"
+        mt.addUIMessage(UIMessage,messageType="Inform")
         
 mt.returnOutput()
