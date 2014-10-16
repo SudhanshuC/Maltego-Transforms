@@ -15,3 +15,7 @@ How to use the script(s):
 ======================
 
 Installation guidelines: http://www.paterva.com/web6/documentation/developer-local.php
+***
+# @haveibeenpwned - Remote TDS Configuration
+
+Instructions in the [`./TDS` directory](https://github.com/cmlh/Maltego-haveibeenpwned/blob/TDS/TDS/README.md)
