@@ -1,0 +1,33 @@
+// A Maltego Machine which extracts emails for a domain and checks if any account related to that has been pwned (using HaveIBeenPwned: HIBP).
+// Special thanks to Troy Hunt for https://haveibeenpwned.com/
+
+machine("sudhanshuchauhan.EmailPwnedatDomain", 
+        displayName:"Email Pwned at Domain", 
+        author:"Sudhanshu Chauhan",
+        description: "Extracts Emails for the Domain and checks if account related to any one of them has been pwned.\
+") {
+
+start {
+
+    
+paths{
+  path{
+  run("paterva.v2.DomainToEmailAddress_AtDomain_SE")
+  run("paterva.v2.PasswordCompromisedhaveibeenpwnedAPIv1")
+  }
+  path{
+  run("paterva.v2.DomainToEmailAddress_SE")
+  run("paterva.v2.PasswordCompromisedhaveibeenpwnedAPIv1")
+  }
+  path{
+  run("paterva.v2.DomainToEmailAddress_Whois")
+  run("paterva.v2.PasswordCompromisedhaveibeenpwnedAPIv1")
+  }
+  path{
+  run("paterva.v2.DomainToEmailAddress_PGP")
+  run("paterva.v2.PasswordCompromisedhaveibeenpwnedAPIv1")
+  }
+    }  
+  }
+}
+
