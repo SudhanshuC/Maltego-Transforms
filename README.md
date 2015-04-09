@@ -1,7 +1,7 @@
 Maltego-Addons
 ==================
 
-Some simple Maltego Transforms, Machines and other Extensions
+Maltego Transforms, Machines and other Extensions
 
 
 Prerequisites:
