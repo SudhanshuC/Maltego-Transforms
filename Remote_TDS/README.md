@@ -1,5 +1,11 @@
 # Remote TDS
 
+## Maltego Chlorine
+
+![Transform Hub Configuration](https://raw.githubusercontent.com/cmlh/Maltego-haveibeenpwned/gh-pages/images/haveibeenpwned-Transform_Hub-Local_Configuration.png)
+
+## Maltego Carbon
+
 1.Click <i>Import Configuration</i>.
 
 ![Click Import Configuration](https://raw.githubusercontent.com/cmlh/Maltego-haveibeenpwned/gh-pages/images/1.Carbon-Import_Configuration.png)
